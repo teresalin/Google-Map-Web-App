@@ -9,11 +9,11 @@
     function UserService($timeout, $filter, $q) {
 
         var service = {};
+        var favorites = {};
 
         service.GetAll = GetAll;
         service.GetById = GetById;
         service.GetByUsername = GetByUsername;
-        service.Getfavorite = Getfavorite;
         service.Create = Create;
         service.Update = Update;
         service.Delete = Delete;
@@ -40,11 +40,6 @@
             var user = filtered.length ? filtered[0] : null;
             deferred.resolve(user);
             return deferred.promise;
-        }
-
-        function Getfavorite(place) {
-        // fav_places.push(place);
-        // console.log(fav_places.length);
         }
 
         function Create(user) {

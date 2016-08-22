@@ -27,6 +27,12 @@
                 controllerAs: 'vm'
             })
 
+            .when('/map', {
+                controller: 'MapController',
+                templateUrl: 'map/map.view.html',
+                controllerAs: 'vm'
+            })
+
             .otherwise({ redirectTo: '/login' });
     }
 
